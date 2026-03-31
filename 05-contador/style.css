@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #030712;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
   font-family: sans-serif;
   display: flex;
   justify-content: center;
@@ -15,10 +15,15 @@ body {
 .container {
   width: 100%;
   max-width: 960px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 a {
-  color: #6b7280;
+  color: #e0f2fe;
   font-size: 0.875rem;
   text-decoration: none;
   display: block;
@@ -26,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #facc15;
+  color: #67e8f9;
 }
 
 h1 {
@@ -49,7 +54,7 @@ p {
 
 label {
   display: block;
-  color: #9ca3af;
+  color: #e2e8f0;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -58,8 +63,8 @@ label {
 
 input {
   width: 100%;
-  background: transparent;
-  border: 1px solid #374151;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.3);
   color: white;
   font-size: 1rem;
   padding: 12px 16px;
@@ -67,13 +72,13 @@ input {
 }
 
 input:focus {
-  border-color: #facc15;
+  border-color: #67e8f9;
 }
 
 button {
   width: 100%;
-  background: #facc15;
-  color: #000;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #ffffff;
   font-weight: 900;
   font-size: 1rem;
   padding: 16px;
@@ -82,6 +87,7 @@ button {
   border: none;
   cursor: pointer;
   margin-bottom: 32px;
+  border-radius: 8px
 }
 
 button:hover {
@@ -89,7 +95,7 @@ button:hover {
 }
 
 .resultado {
-  border: 1px solid #374151;
+  border: 1px solid rgba(255,255,255,0.3);
   padding: 24px;
 }
 
@@ -113,16 +119,20 @@ table {
 }
 
 thead tr {
-  border-bottom: 1px solid #374151;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 thead th {
-  color: #9ca3af;
+  color: #bae6fd;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 8px 12px;
   text-align: left;
+}
+
+thead th:not(:first-child) {
+  text-align: right;
 }
 
 tbody tr {
@@ -133,3 +143,13 @@ tbody td {
   padding: 12px;
   font-size: 0.95rem;
 }
+
+tbody td:not(:first-child) {
+  text-align: right;
+}
+
+.col-contagem { color: #e5e7eb; }
+.col-pares    { color: #22d3ee; }
+.col-impares  { color: #f472b6; }
+.col-multiplos{ color: #facc15; }
+.col-potencias{ color: #a78bfa; }
