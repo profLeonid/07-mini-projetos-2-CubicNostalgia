@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: #030712;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
+  width: 100vw;
+  height: 100vh;
   font-family: sans-serif;
   display: flex;
   justify-content: center;
@@ -13,12 +15,15 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 720px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
 a {
-  color: #6b7280;
+  color: #e0f2fe;
   font-size: 0.875rem;
   text-decoration: none;
   display: block;
@@ -26,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #facc15;
+  color: #67e8f9;
 }
 
 h1 {
@@ -39,11 +44,11 @@ h1 {
 }
 
 h1 span {
-  color: #facc15;
+  color: #67e8f9;
 }
 
 p {
-  color: #9ca3af;
+  color: #e0f2fe;
   font-size: 0.875rem;
   margin-bottom: 40px;
 }
@@ -57,7 +62,7 @@ p {
 
 label {
   display: block;
-  color: #9ca3af;
+  color: #e2e8f0;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -66,8 +71,8 @@ label {
 
 input {
   width: 100%;
-  background: transparent;
-  border: 1px solid #374151;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   font-size: 1rem;
   padding: 12px 16px;
@@ -80,29 +85,30 @@ input:focus {
 
 button {
   width: 100%;
-  background: #facc15;
-  color: #000;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #ffffff;
   font-weight: 900;
   font-size: 1rem;
   padding: 16px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   margin-bottom: 32px;
 }
 
 button:hover {
-  background: #fde047;
+  background: linear-gradient(135deg, #67e8f9, #3b82f6);
 }
 
 .resultado {
-  border: 1px solid #374151;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 24px;
 }
 
 .resultado-titulo {
-  color: #9ca3af;
+  color: #ffffff;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -121,11 +127,11 @@ table {
 }
 
 thead tr {
-  border-bottom: 1px solid #374151;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 thead th {
-  color: #9ca3af;
+  color: #bae6fd;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -138,7 +144,7 @@ thead th:not(:first-child) {
 }
 
 tbody tr {
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 tbody td {
@@ -150,7 +156,7 @@ tbody td:not(:first-child) {
   text-align: right;
 }
 
-.col-parcela { color: #d1d5db; }
-.col-juros   { color: #f87171; }
-.col-total   { color: #facc15; font-weight: 700; }
-.col-saldo   { color: #6b7280; }
+.col-parcela { color: #e5e7eb; }
+.col-juros   { color: #fb7185; }
+.col-total   { color: #22d3ee; font-weight: 700; }
+.col-saldo   { color: #cbd5f5; } /* MUITO mais visível */
